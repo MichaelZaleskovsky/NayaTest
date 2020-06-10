@@ -23,7 +23,7 @@ Run **DeliveryserviceApplicationTests.java** for test.
 
 Type - POST
 
-URL - http://localhost:8080/
+URL - http://localhost:8080/messages
 
 Body
 ```
