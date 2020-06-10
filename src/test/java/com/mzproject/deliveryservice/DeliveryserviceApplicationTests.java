@@ -6,7 +6,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpStatus;
 
 import com.mzproject.deliveryservice.models.Message;
 
@@ -30,10 +29,8 @@ class DeliveryserviceApplicationTests {
 		message.setMessageType("sms");
 		
 		given().contentType("application/json").body(message) 								
-		.when().post(host + port + "/")
+		.when().post(host + port + "/messages")
 		.then() 
-		.statusCode(HttpStatus.OK.value()) 
-		.and()
 		.assertThat().body(equalTo(expectedRecord));
 
 	}
@@ -45,7 +42,7 @@ class DeliveryserviceApplicationTests {
 		message.setMessageType("email");
 		
 		given().contentType("application/json").body(message) 								
-		.when().post(host + port + "/")
+		.when().post(host + port + "/messages")
 		.then() 
 		.assertThat().body(equalTo(expectedRecord));
 
@@ -58,7 +55,7 @@ class DeliveryserviceApplicationTests {
 		message.setMessageType("whatsapp");
 		
 		given().contentType("application/json").body(message) 								
-		.when().post(host + port + "/")
+		.when().post(host + port + "/messages")
 		.then() 
 		.assertThat().body(equalTo(expectedRecord));
 
@@ -71,7 +68,7 @@ class DeliveryserviceApplicationTests {
 		message.setMessageType("pigeon");
 		
 		given().contentType("application/json").body(message) 								
-		.when().post(host + port + "/")
+		.when().post(host + port + "/messages")
 		.then() 
 		.assertThat().body(equalTo(expectedRecord));
 

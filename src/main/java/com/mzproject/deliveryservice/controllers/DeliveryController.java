@@ -16,7 +16,7 @@ public class DeliveryController {
 	@Autowired
 	DeliveryService deliveryService;
 	
-	@PostMapping("/")
+	@PostMapping("/messages")
 	ResponseEntity<String> sendMessage(@RequestBody Message message) {
 		
 		String result = deliveryService.send(message);
