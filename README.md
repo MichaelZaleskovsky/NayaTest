@@ -17,7 +17,7 @@ Run **DeliveryserviceApplicationTests.java** for test.
 # API List
 
 ------------------------------------------------------------------
-## 1. DDELIVERY MESSAGE  
+## 1. DELIVERY MESSAGE  
 
 ### REQUEST
 
@@ -32,7 +32,7 @@ Body
 	messageType: "type"
 }
 
-Acceptable value for type: "sms", "email", "whatsapp"
+Acceptable value for messageType: "sms", "email", "whatsapp"
 ```
 ### RESPONSE
 
